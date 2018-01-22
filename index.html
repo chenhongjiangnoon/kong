@@ -1,0 +1,113 @@
+<!doctype html>  <!-- 声明文档类型-->
+<html>
+<head>
+    <!--声明当前页面的编码集：charset=gbk,gb2312(中文编码),utf-8国际编码-->
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>时空隧道</title> 
+    <meta name="Keyword" content="关键词,关键词">
+    <meta name="description" content="描述">
+    <!--样式-->
+    <style type='text/css'>
+    *{margin:0; padding:0;}
+    ul{list-style:none;}
+    a{text-decoration:none;}
+    .fl{float:left;}
+    .fr{float:right;}
+    .clearfix:after{content:""; display:block; clear:both;}
+    body{overflow: hidden;
+		background: black;
+    }
+	.content{
+		width: 100px;
+		height: 100px;
+		position:absolute;top:200px;left:45%;
+		transform-style:preserve-3d;
+		/*background:-webkit-linear-gradient(#a9a1a2 21%,#dfdfc7,#efcdcd,#888888);/*颜色渐变*/*/
+	}
+	.d{ position:absolute;
+		width: 100px;
+		height: 100px;
+		background:-webkit-linear-gradient(#a9a1a2 21%,#dfdfc7,#efcdcd,#888888);/*颜色渐变*/;
+		font-size: 50px;
+		text-align: center;
+		line-height: 93px;
+		opacity: 0;
+	}
+	.d1{
+		animation:runA 3s linear infinite;top:1px;
+		/*transform:perspective(10px) rotateX(10deg) rotateZ(180deg) translateY(100px);*//*perspective景深*/
+	}
+	.d11{
+		animation:runA 3s 1S linear infinite;
+	}
+	.d111{
+		animation:runA 3s 2S linear infinite;
+	}
+	.d2{
+		animation:runB 3s linear infinite;top:-100px;
+		/*transform:perspective(10px) rotateX(10deg) rotateZ(180deg) translateY(100px);*//*perspective景深*/
+	}
+	.d22{
+		animation:runB 3s 1S linear infinite;
+	}
+	.d222{
+		animation:runB 3s 2S linear infinite;
+	}
+	.d3{
+		animation:runC 3s linear infinite;top:-50px;left:-50px;
+		/*transform:perspective(10px) rotateX(10deg) rotateZ(180deg) translateY(100px);*//*perspective景深*/
+	}
+	.d33{
+		animation:runC 3s 1S linear infinite;
+	}
+	.d333{
+		animation:runC 3s 2S linear infinite;
+	}
+	.d4{
+		animation:runD 3s linear infinite;top:-50px;right:-50px ;
+		/*transform:perspective(10px) rotateX(10deg) rotateZ(180deg) translateY(100px);*//*perspective景深*/
+	}
+	.d44{
+		animation:runD 3s 1S linear infinite;
+	}
+	.d444{
+		animation:runD 3s 2S linear infinite;
+	}
+	/*定义一个动画*/
+	@keyframes runA{
+		from{transform:perspective(10px) rotateX(10deg) rotateZ(180deg) translateY(200px);opacity: 1;}
+		to{transform:perspective(10px) rotateX(10deg) rotateZ(180deg) translateY(-100px);opacity: 1;}
+	}
+	@keyframes runB{
+		from{transform:perspective(10px) rotateX(-10deg) rotateZ(0deg) translateY(200px);opacity: 1;}
+		to{transform:perspective(10px) rotateX(-10deg) rotateZ(0deg) translateY(-100px);opacity: 1;}
+	}
+	@keyframes runC{
+		from{transform:perspective(10px) rotateX(0deg) rotateY(12deg) rotateZ(-90deg) translateY(200px);opacity: 1;}
+		to{transform:perspective(10px) rotateX(0deg) rotateY(12deg)  rotateZ(-90deg) translateY(-100px);opacity: 1;}
+	}
+	@keyframes runD{
+		from{transform:perspective(10px) rotateX(0deg) rotateY(-12deg) rotateZ(90deg) translateY(200px);opacity: 1;}
+		to{transform:perspective(10px) rotateX(0deg) rotateY(-12deg)  rotateZ(90deg) translateY(-100px);opacity: 1;}
+	}
+    </style>
+</head> 
+<body>
+		
+    <div class="content">
+		<div class="d d1">A</div>
+		<div class="d d1 d11">A</div>
+		<div class="d d1 d111">A</div>
+		<div class="d d2">B</div>
+		<div class="d d2 d22">B</div>
+		<div class="d d2 d222">B</div>
+		<div class="d d3">C</div>
+		<div class="d d3 d33">C</div>
+		<div class="d d3 d333">C</div>
+		<div class="d d4">D</div>
+		<div class="d d4 d44">D</div>
+		<div class="d d4 d444">D</div>
+    </div>
+	
+</body>	
+</html>
